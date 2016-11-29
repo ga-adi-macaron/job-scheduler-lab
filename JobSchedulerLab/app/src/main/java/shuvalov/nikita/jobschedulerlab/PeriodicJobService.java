@@ -19,13 +19,13 @@ public class PeriodicJobService extends JobService {
             protected Integer doInBackground(Void... voids) {
                 int i = jobParameters.getExtras().getInt("count");
                 jobParameters.getExtras().putInt("count", i+1);
-                //ToDo:Update views to show oldCount and newCount
                 return i;
             }
 
             @Override
             protected void onPostExecute(Integer integer) {
                 super.onPostExecute(integer);
+                //ToDo:Update views to show oldCount and newCount
 
                 jobFinished(jobParameters,true);
             }

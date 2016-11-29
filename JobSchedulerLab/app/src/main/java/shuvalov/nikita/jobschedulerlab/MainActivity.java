@@ -6,12 +6,14 @@ import android.content.ComponentName;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public static final int PERIODIC_JOB_ID = 47;
     public static final int RANDOM_JOB_ID = 123;
     public static final int OTHER_JOB_ID = 55;
 
+    TextView mTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
