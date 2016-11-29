@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="NUMBER_BROADCAST">REQUEST_BROADCAST</string>
+    <string name="number_message">number</string>
+    <string name="COLOR_BROADCAST">COLOR_BROADCAST</string>
+    <string name="red_color_message">color_message</string>
+    <string name="blue_color_message">blue message</string>
+    <string name="green_color_message">green message</string>
+    <string name="WORD_BROADCAST">word broadcast</string>
+    <string name="random_word">random word</string>
+    <string-array name="random_list">
+        <item>tan</item>
+        <item>quail</item>
+        <item>word</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>cable</item>
+        <item>sony</item>
+        <item>samsung</item>
+        <item>letter</item>
+        <item>telly</item>
+        <item>cage</item>
+    </string-array>
+</resources>
