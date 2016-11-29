@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        assignJobs();
+    }
+
+    public void assignJobs(){
+
         PersistableBundle periodicPersistentBundle = new PersistableBundle();
         periodicPersistentBundle.putInt("count", 0);
 
@@ -36,5 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         JobScheduler jobScheduler = (JobScheduler)getSystemService(JOB_SCHEDULER_SERVICE);
+        jobScheduler.schedule(periodicJobInfo);
+        jobScheduler.schedule(randomJobInfo);
+        jobScheduler.schedule(otherJobInfo);
     }
 }

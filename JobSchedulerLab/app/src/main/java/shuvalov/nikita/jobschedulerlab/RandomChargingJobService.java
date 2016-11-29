@@ -1,5 +1,6 @@
 package shuvalov.nikita.jobschedulerlab;
 
+import android.app.job.JobParameters;
 import android.app.job.JobService;
 
 /**
@@ -7,4 +8,13 @@ import android.app.job.JobService;
  */
 
 public class RandomChargingJobService extends JobService {
+    @Override
+    public boolean onStartJob(JobParameters jobParameters) {
+        return false;
+    }
+
+    @Override
+    public boolean onStopJob(JobParameters jobParameters) {
+        return false;
+    }
 }

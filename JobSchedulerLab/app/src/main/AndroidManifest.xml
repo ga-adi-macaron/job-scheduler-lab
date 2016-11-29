@@ -17,6 +17,10 @@
         </activity>
         <service android:name=".PeriodicJobService"
                  android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".RandomChargingJobService"
+                 android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".OtherChargingJobService"
+                 android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>
