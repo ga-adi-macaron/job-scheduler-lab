@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.korbkenny.kennyjoblab.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/TopLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:background="#ff0000"
+        android:text="before"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <TextView
+        android:id="@+id/TopRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:background="#00ff00"
+        android:text="after"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/MiddleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/MiddleLeft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="HELLO"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="40sp"
+            />
+        <TextView
+            android:id="@+id/MiddleRight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="GOODBYE"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="40sp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="50">
+
+        <TextView
+            android:id="@+id/BottomLeft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="#0000ff"
+            android:text="before"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"/>
+        <TextView
+            android:id="@+id/BottomRight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="#ffff00"
+            android:text="after"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"/>
+
+    </LinearLayout>
+
+</LinearLayout>
