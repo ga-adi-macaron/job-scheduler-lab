@@ -12,14 +12,13 @@ public class ServiceListenerHelper {
     private static ServiceListenerHelper sInstance = new ServiceListenerHelper();
 
     public static ServiceListenerHelper getInstance() {
-        return sInstance;
-    }
-
-    private ServiceListenerHelper() {
         if(sInstance == null) {
             sInstance = new ServiceListenerHelper();
         }
+        return sInstance;
     }
+
+    private ServiceListenerHelper() {}
 
     public void setTimeListener(DualJobService.TimeChangeListener listener) {
         mTimeListener = listener;
@@ -33,5 +32,15 @@ public class ServiceListenerHelper {
         mCountListener = listener;
     }
 
+    public DualJobService.TimeChangeListener getTime() {
+        return mTimeListener;
+    }
 
+    public SecondDualJobService.PlugChangeListener getPlug() {
+        return mPlugListener;
+    }
+
+    public SoloJobService.CountIncreasedListener getCount() {
+        return mCountListener;
+    }
 }

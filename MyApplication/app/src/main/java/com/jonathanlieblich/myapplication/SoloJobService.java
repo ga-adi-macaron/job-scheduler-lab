@@ -10,9 +10,11 @@ import android.os.AsyncTask;
 
 public class SoloJobService extends JobService {
     AsyncTask<Integer, Void, Integer> mTask;
+    CountIncreasedListener mListener;
 
     @Override
     public boolean onStartJob(final JobParameters jobParameters) {
+        mListener = ServiceListenerHelper.getInstance().getCount();
 
         mTask = new AsyncTask<Integer, Void, Integer>() {
             @Override
@@ -23,7 +25,7 @@ public class SoloJobService extends JobService {
             @Override
             protected void onPostExecute(Integer integer) {
                 super.onPostExecute(integer);
-
+                mListener.onCountIncreaseListener(integer);
                 jobFinished(jobParameters, false);
             }
         }.execute(jobParameters.getExtras().getInt("count"));

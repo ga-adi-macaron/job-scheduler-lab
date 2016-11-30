@@ -10,9 +10,11 @@ import android.os.AsyncTask;
 
 public class SecondDualJobService extends JobService {
     AsyncTask<String, Void, String> mTask;
+    PlugChangeListener mListener;
 
     @Override
     public boolean onStartJob(final JobParameters jobParameters) {
+        mListener = ServiceListenerHelper.getInstance().getPlug();
 
         mTask = new AsyncTask<String, Void, String>() {
             @Override
@@ -27,6 +29,7 @@ public class SecondDualJobService extends JobService {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
+                mListener.updateStatusListener(s);
                 jobFinished(jobParameters, false);
             }
         }.execute(jobParameters.getExtras().getString("power"));

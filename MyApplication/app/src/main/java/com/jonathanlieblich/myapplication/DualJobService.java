@@ -14,9 +14,12 @@ import java.util.Locale;
 
 public class DualJobService extends JobService {
     AsyncTask<Void, Void, String> mTask;
+    TimeChangeListener mListener;
 
     @Override
     public boolean onStartJob(final JobParameters jobParameters) {
+        mListener = ServiceListenerHelper.getInstance().getTime();
+
         mTask = new AsyncTask<Void, Void, String>() {
             @Override
             protected String doInBackground(Void... voids) {
@@ -28,7 +31,7 @@ public class DualJobService extends JobService {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-
+                mListener.onChangeListener(s);
                 jobFinished(jobParameters, false);
             }
         }.execute();
