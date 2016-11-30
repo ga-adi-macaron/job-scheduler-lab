@@ -24,13 +24,13 @@ public class SoloJobService extends JobService {
 
             @Override
             protected void onPostExecute(Integer integer) {
-                super.onPostExecute(integer);
+                super.onPostExecute(null);
                 mListener.onCountIncreaseListener(integer);
-                jobFinished(jobParameters, false);
+                jobFinished(jobParameters, true);
             }
         }.execute(jobParameters.getExtras().getInt("count"));
 
-        return false;
+        return true;
     }
 
     @Override

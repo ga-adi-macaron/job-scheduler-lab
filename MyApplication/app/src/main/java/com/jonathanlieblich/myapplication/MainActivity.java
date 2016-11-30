@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements SoloJobService.Co
                 .setBackoffCriteria(500, JobInfo.BACKOFF_POLICY_LINEAR)
                 .build();
 
-        int count = 0;
+        int count = 1;
 
         PersistableBundle soloJobBundle = new PersistableBundle();
         soloJobBundle.putInt("count", count);
@@ -90,6 +90,6 @@ public class MainActivity extends AppCompatActivity implements SoloJobService.Co
 
     @Override
     public void onCountIncreaseListener(int count) {
-        mSoloText.setText(count);
+        mSoloText.setText(count+++"");
     }
 }
