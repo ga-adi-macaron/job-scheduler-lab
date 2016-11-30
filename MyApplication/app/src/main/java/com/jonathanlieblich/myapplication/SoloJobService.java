@@ -15,6 +15,7 @@ public class SoloJobService extends JobService {
     @Override
     public boolean onStartJob(final JobParameters jobParameters) {
         mListener = ServiceListenerHelper.getInstance().getCount();
+        ServiceListenerHelper.getInstance().setCountListener(mListener);
 
         mTask = new AsyncTask<Integer, Void, Integer>() {
             @Override
@@ -24,7 +25,7 @@ public class SoloJobService extends JobService {
 
             @Override
             protected void onPostExecute(Integer integer) {
-                super.onPostExecute(null);
+                super.onPostExecute(integer);
                 mListener.onCountIncreaseListener(integer);
                 jobFinished(jobParameters, true);
             }
@@ -36,10 +37,10 @@ public class SoloJobService extends JobService {
     @Override
     public boolean onStopJob(JobParameters jobParameters) {
         if(mTask != null && mTask.getStatus().equals(AsyncTask.Status.RUNNING)) {
-            mTask.cancel(false);
+            mTask.cancel(true);
         }
 
-        return false;
+        return true;
     }
 
     public interface CountIncreasedListener {
