@@ -61,14 +61,10 @@ public class MainActivity extends AppCompatActivity implements SoloJobService.Co
         if(mFirstDual.getText() != null) {
             mFirstOld.setText(mFirstDual.getText());
         }
-        // TODO: Add listener to get time oif last Service call
-        mFirstDual.setText("");
 
         if(mSecondDual.getText() != null) {
             mSecondOld.setText(mSecondDual.getText());
         }
-        //TODO: Add listener to change plugged or unplugged
-        mSecondDual.setText("");
 
         if(mSoloText.getText() != null) {
             mSoloOld.setText(mSoloText.getText());
@@ -76,12 +72,12 @@ public class MainActivity extends AppCompatActivity implements SoloJobService.Co
 
         ServiceListenerHelper.getInstance().setCountListener(this);
         ServiceListenerHelper.getInstance().setPlugListener(this);
-        ServiceListenerHelper.getInstance().setTimeListenerFUCKINGBULLSHIT(this);
+        ServiceListenerHelper.getInstance().setTimeListener(this);
     }
 
     @Override
-    public String onChangeListener(String time) {
-        return time;
+    public void onChangeListener(String time) {
+        mFirstDual.setText(time);
     }
 
     @Override

@@ -1,7 +1,5 @@
 package com.jonathanlieblich.myapplication;
 
-import android.widget.TimePicker;
-
 /**
  * Created by jonlieblich on 11/29/16.
  */
@@ -23,7 +21,7 @@ public class ServiceListenerHelper {
         }
     }
 
-    public void setTimeListenerFUCKINGBULLSHIT(DualJobService.TimeChangeListener listener) {
+    public void setTimeListener(DualJobService.TimeChangeListener listener) {
         mTimeListener = listener;
     }
 
@@ -34,4 +32,6 @@ public class ServiceListenerHelper {
     public void setCountListener(SoloJobService.CountIncreasedListener listener) {
         mCountListener = listener;
     }
+
+
 }

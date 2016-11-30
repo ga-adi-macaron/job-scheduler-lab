@@ -28,6 +28,7 @@ public class DualJobService extends JobService {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
+
                 jobFinished(jobParameters, false);
             }
         }.execute();
@@ -44,6 +45,6 @@ public class DualJobService extends JobService {
         return false;
     }
     public interface TimeChangeListener {
-        String onChangeListener(String time);
+        void onChangeListener(String time);
     }
 }
