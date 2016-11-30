@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">JobSchedulerLab</string>
+
+    <string name="NumBroadcast">NumBroadcast</string>
+
+    <string name="ColorBroadcast">ColorBroadcast</string>
+
+    <string name="WordBroadcast">WordBroadcast</string>
+
+    <string name="NumMessage">NumMessage</string>
+
+    <string name="RedMessage">RedMessage</string>
+
+    <string name="BlueMessage">BlueMessage</string>
+
+    <string name="GreenMessage">GreenMessage</string>
+
+    <string name="WORD">a random word</string>
+
+    <string-array name="WordList">
+        <item>word</item>
+        <item>hello</item>
+        <item>random</item>
+        <item>uhhhhhhhhhh</item>
+        <item>purple</item>
+        <item>WHATTTT?!?!?!?!?!</item>
+        <item>another1</item>
+    </string-array>
+
+
+
+
+
+
+
+</resources>
