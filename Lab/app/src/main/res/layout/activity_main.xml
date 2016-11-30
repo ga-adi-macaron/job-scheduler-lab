@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.elysium.lab.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/topImage1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_cloud" />
+
+        <ImageView
+            android:id="@+id/topImage2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_edward"/>
+
+        <ImageView
+            android:id="@+id/topImage3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_goku"/>
+
+        <ImageView
+            android:id="@+id/topImage4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_haruhi"/>
+
+        <ImageView
+            android:id="@+id/topImage5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_ichigo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/midImage1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_itachi" />
+
+        <ImageView
+            android:id="@+id/midImage2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_kakashi"/>
+
+        <ImageView
+            android:id="@+id/midImage3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_kenshin"/>
+
+        <ImageView
+            android:id="@+id/midImage4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_l"/>
+
+        <ImageView
+            android:id="@+id/midImage5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_lelouch"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/botImage1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_light" />
+
+        <ImageView
+            android:id="@+id/botImage2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_lum"/>
+
+        <ImageView
+            android:id="@+id/botImage3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_madara"/>
+
+        <ImageView
+            android:id="@+id/botImage4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_monkey_d"/>
+
+        <ImageView
+            android:id="@+id/botImage5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_naruto"/>
+
+    </LinearLayout>
+
+</LinearLayout>
